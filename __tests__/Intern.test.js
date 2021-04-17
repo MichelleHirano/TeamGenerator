@@ -12,7 +12,7 @@ test("getRole() to return Intern", () => {
     expect(e.getRole()).toBe(testValue);
 });
 
-test("getRole function", () => {
+test("getSchool function", () => {
     const testValue = "Engineer";
     const e = new Intern("Jenny", 1, "jenny@bp.com", testValue);
     expect(e.getSchool()).toBe(testValue);
