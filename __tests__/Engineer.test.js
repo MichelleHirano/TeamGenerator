@@ -15,5 +15,5 @@ test("getRole function", () => {
 test("Get gitHub", () => {
     const testValue = "MichelleHirano";
     const employee = new Engineer("Jimin", 1, "jimin@bts.com", testValue);
-    expect(employee.getGitHub()).toBenpm(testValue);
+    expect(employee.getGitHub()).toBe(testValue);
 })
