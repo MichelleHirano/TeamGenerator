@@ -33,13 +33,13 @@ const generateCard = function(arr){
 
     if (arr.title === "Manager"){
         positionIcon = `<i class="fas fs-briefcase"></i>`
-        roleInfo='Office Number: ${arr.officeNumber}'
+        roleInfo=`Office Number: ${arr.officeNumber}`
     }else if (arr.title === "Engineer"){
         positionIcon = `<i class="fas fs-wrench"></i>`
         roleInfo=`GitHub Username:<a href="https://github.com/${arr.github}" target="_blank">${arr.github}</a>`
     }else if (arr.title === "Intern"){
         positionIcon = `<i class="fas fs-graduation-cap"></i>`
-        roleInfo='School:${arr.school}'
+        roleInfo=`School:${arr.school}`
     }
 
     return `
