@@ -43,5 +43,20 @@ const generateCard = function(arr){
     }
 
     return `
-    <div class`
+    <div class="col-md-4">
+        <div class="card shadow-lg bg-white rounded">
+            <div class="card-header bg-primary">
+                <h4 class="text-white text-center">${arr.name}</h4>
+                <h4 class="text-white text-center">${positionIcon}</i>${arr.title}</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list">
+                    <li>Employee ID:${arr.id}</li>
+                    <li>Email:<a href="mailto:${arr.email}">${arr.email}</a></li>
+                    <li>${roleInfo}</i>
+                </ul>
+            </div>
+        </div>
+    </div>`
 }
+1
