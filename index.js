@@ -13,6 +13,26 @@ const appendFileAsync = util.promisify(fs.appendFile);
 let teamArray = [];
 let teamString = "";
 
+//Main function
+async function main(){
+    try{
+        await prompt()
+
+        for (let i = 0; i< teamArray.length; i++){
+            teamString = teamString + html.generateCard(teamArray[i]);
+        }
+
+        let finalHTML = html.generateHTML(teamString)
+        console.log("Generating index.html file...");
+
+        writeFileAsync("./dist/index.html", finalHTML);
+        console.log("File created successfully");
+    }
+    catch(err){
+        return console.log(err);
+    }
+}
+
 
 // Inquirer prompts to collect user data
 async function prompt() {
@@ -117,3 +137,5 @@ async function prompt() {
         },]);
     } while (responseDone.finish === "Yes");
 }
+
+main();
