@@ -6,6 +6,14 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+//async functions
+const writeFileAsync = util.promisify(fs.writeFile);
+const appendFileAsync = util.promisify(fs.appendFile);
+
+let teamArray = [];
+let teamString = "";
+
+
 // Inquirer prompts to collect user data
 async function prompt() {
     let responseDone = "";
