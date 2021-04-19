@@ -59,4 +59,6 @@ const generateCard = function(arr){
         </div>
     </div>`
 }
-1
+
+exports.generateHTML = generateHTML;
+exports.generateCard = generateCard;
